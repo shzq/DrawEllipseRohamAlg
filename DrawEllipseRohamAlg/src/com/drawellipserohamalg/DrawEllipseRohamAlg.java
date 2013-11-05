@@ -186,7 +186,7 @@ public class DrawEllipseRohamAlg extends JApplet {
 		private static void sumOfDistance(List<Focus> foci, double i, double j) {
 			double d = 0;	
 			for (int k = 0; k < foci.size(); k++) {
-					d = Math.sqrt( Math.pow(foci.get(k).getPoint().getX() - i, 2) + Math.pow(foci.get(k).getPoint().getY(), 2) );
+					d += Math.sqrt( Math.pow(foci.get(k).getPoint().getX() - i, 2) + Math.pow(foci.get(k).getPoint().getY() - j, 2) );
 				}
 			d -= C;
 			if (Math.abs(d) < THRESHOLD) {
